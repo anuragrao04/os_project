@@ -32,6 +32,7 @@ static int child_function(void *data) {
   while (!kthread_should_stop()) {
     schedule();
   }
+
   set_current_state(TASK_RUNNING);
   printk(KERN_INFO "Exiting child_function\n");
   return 0;
